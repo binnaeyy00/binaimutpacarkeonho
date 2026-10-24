@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabrina Malva Husnia | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ffe4ef,
+    #ffc5df,
+    #fff0f7
+  );
+  color: #713c56;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      background: rgba(255, 255, 255, 0.45);
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #d94687;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #713c56;
+      margin-left: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #e94e98;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: white;
+      color: #d94687;
+      padding: 10px 16px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 65px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #d94687;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    .hero p {
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e94e98;
+      color: white;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 30px;
+      margin: 5px 5px 5px 0;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #b72e70;
+      transform: translateY(-3px);
+    }
+
+    .circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffc5df;
+    border: 6px solid white;
+    box-shadow: 0 15px 40px #d9468730;
+    flex-shrink: 0;
+    }
+
+    .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+
+    section {
+      padding: 65px 10%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #bd397a;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.72);
+      padding: 25px;
+      border-radius: 22px;
+      border: 1px solid #ffffff;
+      box-shadow: 0 8px 25px #a92f6810;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      margin: 12px 0;
+      color: #bd397a;
+    }
+
+    .emoji {
+      font-size: 35px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      background: #ffe0ed;
+      color: #a92f68;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #e94e98, #bd397a);
+      color: white;
+      text-align: center;
+      padding: 40px 25px;
+      border-radius: 25px;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      margin-bottom: 20px;
+    }
+
+    .contact-box .btn {
+      background: white;
+      color: #bd397a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #9d5376;
+    }
+
+    @media (max-width: 750px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 7%;
+      }
+
+     .circle {
+    width: 210px;
+    min-width: 210px;
+    height: 210px;
+    font-size: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+     }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 7%;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">sabrina. 🎀</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="badge">🎀 HELLO, SOBAT COMIT!</div>
+
+      <h1>Hi, I'm <span>Sabrina Malva Husnia.</span></h1>
+
+      <p>
+        Welcome to my little corner of the internet! ♡
+        Aku sedang belajar dunia teknologi, mengeksplorasi
+        coding, dan mencoba membuat sesuatu yang kreatif.
+        Masih pemula, tapi selalu siap belajar hal baru! ✨
+      </p>
+
+      <a href="#about" class="btn">Kenalan Yuk! ↗️</a>
+      <a href="#journey" class="btn">My Journey ♡</a>
+    </div>
+
+    <div class="circle">
+    <img src="foto-sabrina.jpg.jpeg" alt="Foto Sabrina">
+  </div>
+  </header>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me 🌷</h2>
+      <p>A little introduction about myself.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">🩷</div>
+        <h3>Who Am I?</h3>
+        <p>
+          Aku Sabrina Malva Husnia, seorang mahasiswa
+          yang sedang mengenal lebih jauh dunia teknologi
+          dan pengembangan website.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">✨</div>
+        <h3>My Personality</h3>
+        <p>
+          Aku suka mengeksplorasi ide, mencoba hal baru,
+          dan belajar dari setiap proses.
+          Pelan-pelan asal konsisten!
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🌱</div>
+        <h3>My Dreams</h3>
+        <p>
+          Terus berkembang, meningkatkan kemampuan digital,
+          dan membuat proyek-proyek kecil yang bermanfaat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-title">
+      <h2>Skills & Learning 💻</h2>
+      <p>Things I'm currently learning and exploring.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">🌐</div>
+        <h3>Web Development</h3>
+        <p>
+          Belajar dasar pembuatan website dan memahami
+          fungsi setiap bahasa pemrograman.
+        </p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🎨</div>
+        <h3>Creative Thinking</h3>
+        <p>
+          Mengeksplorasi ide dan mencari inspirasi
+          untuk membuat tampilan yang menarik.
+        </p>
+        <div class="tags">
+          <span class="tag">Creativity</span>
+          <span class="tag">Ideas</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="emoji">📚</div>
+        <h3>Learning Mindset</h3>
+        <p>
+          Mau belajar, berani bertanya, terbuka pada
+          masukan, dan terus mencoba sampai paham.
+        </p>
+        <div class="tags">
+          <span class="tag">Curious</span>
+          <span class="tag">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="section-title">
+      <h2>My Journey ⭐</h2>
+      <p>Small steps, big dreams!</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">💻</div>
+        <h3>My Coding Journey</h3>
+        <p>
+          Mulai mengenal HTML, CSS, dan JavaScript
+          sebagai langkah awal belajar membuat website.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🎀</div>
+        <h3>Personal Portfolio</h3>
+        <p>
+          Mencoba membuat website portofolio pribadi
+          dengan desain pink yang menggambarkan
+          kepribadian dan kreativitas.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🚀</div>
+        <h3>What's Next?</h3>
+        <p>
+          Terus berlatih, mencoba proyek baru,
+          dan mengembangkan kemampuan sedikit demi sedikit.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-box">
+      <h2>Let's Connect! 💌</h2>
+      <p>
+        Let's learn, grow, and create something amazing together!
+      </p>
+
+      <a class="btn" href="mailto:emailkamu@example.com">
+        Email Me ↗️
+      </a>
+      <div class="contact-buttons">
+    <a class="btn" href="https://wa.me/6281234567890"
+       target="_blank" rel="noopener noreferrer">
+        💬 WhatsApp Me
+    </a>
+
+    <a class="btn"
+       href="https://www.instagram.com/usernamekamu/"
+       target="_blank" rel="noopener noreferrer">
+        📸 Instagram
+    </a>
+</div>
+    </div>
+  </section>
+
+  <footer>
+    Made with 💗 by Sabrina Malva Husnia
+    <br>
+    © 2026 — My Little Pink Portfolio 🎀
+  </footer>
+
+<!-- ===== ELEMEN AUDIO ===== -->
+    <!-- Ganti "URL_LAGU_ANDA.mp3" dengan link atau nama file lagu Anda -->
+    <audio id="bgMusic" loop>
+        <source src="vidio.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ===== TOMBOL KONTROL MUSIK ===== -->
+    <button id="musicToggle" class="music-btn">
+        🎵 Putar Lagu
+    </button>
+
+    <!-- ===== SCRIPT UNTUK AUTOPLAY & KONTROL ===== -->
+    <script>
+        const bgMusic = document.getElementById("bgMusic");
+        const musicToggle = document.getElementById("musicToggle");
+
+        // Fungsi ini akan mencoba memutar lagu secara otomatis saat web dibuka
+        window.addEventListener('DOMContentLoaded', (event) => {
+            bgMusic.play().then(() => {
+                // Jika browser mengizinkan autoplay
+                musicToggle.innerHTML = "⏸️ Jeda Lagu";
+            }).catch((error) => {
+                // Jika browser memblokir autoplay, tunggu pengguna mengklik tombol
+                console.log("Autoplay diblokir oleh browser. Pengunjung harus memulai manual.");
+            });
+        });
+
+        // Fungsi ketika tombol diklik
+        musicToggle.addEventListener("click", () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicToggle.innerHTML = "⏸️ Jeda Lagu";
+            } else {
+                bgMusic.pause();
+                musicToggle.innerHTML = "🎵 Putar Lagu";
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
